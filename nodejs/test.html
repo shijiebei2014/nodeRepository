@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>My first html</title>
+
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript">
+        /*
+        * 当select的值发生改变时，执行的change事件函数
+        * */
+        function change(option) {
+            var sel = document.getElementById("sel");
+            var show = document.getElementById("show");
+
+
+            if (option.value == "feng") {
+                show.value = "风";
+            } else {
+                show.value = "";
+            }
+
+        }
+
+        /*
+        function pad(num, n) {
+            return Array(n>(''+num).length?(n-(''+num).length+1):0).join(0)+num;
+        }
+
+        console.log(new Array(4).join(0));
+        console.log(pad(10,2));
+        */
+
+        window.onload = function(){
+            var a = [];
+            alert(isArray(a));
+        };
+        </script>
+</head>
+<body>
+    <input id="show"/><br>
+
+    <select id="sel" onchange = "change(this)">
+        <option value="feng">风</option>
+        <option value="yu">雨</option>
+        <option value="lei">雷</option>
+        <option value="dian">电</option>
+    </select>
+</body>
+</html>
